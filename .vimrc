@@ -3,28 +3,31 @@
 " Date: 12.07.2017
 " Last Modified Date: 12.07.2017
 " Last Modified By: Damien Benloukil <damien@leciseau.fr>
-set nocompatible      
-filetype off         
 
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin('~/.vim/plugged')
 
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'scwood/vim-hybrid'
-Plugin 'scrooloose/nerdtree'
-Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'ervandew/supertab'
-Plugin 'lumiliet/vim-twig'
-Plugin 'alpertuna/vim-header'
-Plugin 'nathanaelkane/vim-indent-guides'
-Plugin 'pangloss/vim-javascript'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'ruanyl/vim-fixmyjs'
-Plugin 'moll/vim-node'
-Plugin 'mtscout6/syntastic-local-eslint.vim'
+Plug 'VundleVim/Vundle.vim'
+Plug 'scwood/vim-hybrid'
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'vim-syntastic/syntastic'
+Plug 'ervandew/supertab'
+Plug 'lumiliet/vim-twig'
+Plug 'alpertuna/vim-header'
+Plug 'nathanaelkane/vim-indent-guides'
+Plug 'pangloss/vim-javascript'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'ruanyl/vim-fixmyjs'
+Plug 'moll/vim-node'
+Plug 'mtscout6/syntastic-local-eslint.vim'
 
-call vundle#end()           
+call plug#end()
+
+" for eslint compiler
+" :SyntasticCheck eslint
+    
+"filetype off         
+
 
 filetype plugin indent on
 
@@ -49,14 +52,14 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
+let g:SyntasticCheck = 'eslint'
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:javascript_plugin_flow = 1
 let g:jsx_ext_required = 0
-
-
+let g:syntastic_javascript_checkers=['eslint']
 
 set mouse=a
 map <C-n> :NERDTreeToggle<CR>
