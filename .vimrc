@@ -12,6 +12,7 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'ervandew/supertab'
 Plugin 'lumiliet/vim-twig'
 Plugin 'alpertuna/vim-header'
+Plugin 'pangloss/vim-javascript'
 
 call vundle#end()           
 filetype plugin indent on 
