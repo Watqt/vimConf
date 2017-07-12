@@ -10,6 +10,8 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'ervandew/supertab'
+Plugin 'lumiliet/vim-twig'
+Plugin 'alpertuna/vim-header'
 
 call vundle#end()           
 filetype plugin indent on 
@@ -42,3 +44,7 @@ let g:syntastic_check_on_wq = 0
 
 set mouse=a
 map <C-n> :NERDTreeToggle<CR>
+
+let g:header_field_author = 'Damien Benloukil'
+let g:header_field_author_email = 'damien@leciseau.fr'
+map <C-h> :AddHeader<CR>
