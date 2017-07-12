@@ -1,10 +1,15 @@
+" File: /Users/Damien/.vimrc
+" Author: Damien Benloukil <damien@leciseau.fr>
+" Date: 12.07.2017
+" Last Modified Date: 12.07.2017
+" Last Modified By: Damien Benloukil <damien@leciseau.fr>
 set nocompatible      
 filetype off         
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-     
-Plugin 'gmarik/Vundle.vim' 
+
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'scwood/vim-hybrid'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -12,12 +17,16 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'ervandew/supertab'
 Plugin 'lumiliet/vim-twig'
 Plugin 'alpertuna/vim-header'
+Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'pangloss/vim-javascript'
 Plugin 'jelera/vim-javascript-syntax'
-
+Plugin 'ruanyl/vim-fixmyjs'
+Plugin 'moll/vim-node'
+Plugin 'mtscout6/syntastic-local-eslint.vim'
 
 call vundle#end()           
-filetype plugin indent on 
+
+filetype plugin indent on
 
 set tabstop=2
 set shiftwidth=2
@@ -44,6 +53,10 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:javascript_plugin_flow = 1
+let g:jsx_ext_required = 0
+
+
 
 set mouse=a
 map <C-n> :NERDTreeToggle<CR>
