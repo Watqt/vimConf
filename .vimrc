@@ -1,8 +1,8 @@
 " File: .vimrc
-" Author: Damien Benloukil <damien@leciseau.fr>
+" Author: Damien Benloukil <damien.benloukil@gmail.com>
 " Date: 12.07.2017
 " Last Modified Date: 28.01.2019
-" Last Modified By: Damien Benloukil <damien@leciseau.fr>
+" Last Modified By: Damien Benloukil <damien.benloukil@gmail.com>
 
 
 " vim-bootstrap b0a75e4
@@ -620,7 +620,7 @@ let g:jedi#documentation_command = "K"
 let g:jedi#usages_command = "<leader>n"
 let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "0"
-let g:jedi#completions_command = "<C-Space>"
+"let g:jedi#completions_command = "<C-Space>"
 let g:jedi#smart_auto_mappings = 0
 
 " syntastic
@@ -739,4 +739,5 @@ else
   let g:airline_symbols.linenr = ''
 endif
 
+"custo
 hi Normal ctermbg=none
